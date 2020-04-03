@@ -8,14 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  clickCounter: number = 0;
-  number1: number = 0;
+  CurrentDate: number;
   number: number = 0;
   name: string = '';
-
-  click(num): void {
-    this.number = num;
-  }
 
   numbers(currency: number): void {
     this.number = currency;
@@ -25,7 +20,7 @@ export class AppComponent {
     this.name = name;
   }
 
-  numbers1(number): void {
-    this.number1 = number;
+  date(): void {
+    this.CurrentDate = Date.now();
   }
 }

@@ -1,14 +1,28 @@
 <div class="container">
     <h1>Pipes In Angular</h1>
 
+    <div class="event">
+        <h3>Date Pipes</h3>
+        <button class="field" (click)=date()>ClickMe!</button>
+        <p class="field">
+            <a>Full Date: </a> {{CurrentDate |date:'full'}}
+            <br> <a>Short Date: </a> {{CurrentDate |date:'shortDate'}}
+            <br><a>Medium Date: </a> {{CurrentDate |date:'mediumDate'}}
+            <br> <a>Full Date: </a> {{CurrentDate |date:'fullDate'}}
+            <br> <a>Time: </a> {{CurrentDate |date:'hh:mm'}}
+            <br> <a> Time: </a> {{CurrentDate |date:'shortTime'}}
+            <br><a>Time: </a> {{CurrentDate |date:'h:mm:p'}}
+
+
+        </p>
+    </div>
+
 
     <div class="event">
         <h3>Number Pipes</h3>
-        <input type="text" (ngModel)="number">
-        <button class="field" (click)=number>ClickMe!</button>
         <p class="field">
-            <a>No Formatting: </a> {{number }}
-            <br> <a>2 Decimal Place: </a> {{number | number:'3.2'}}
+            <a>No Formatting: </a> {{100 }}
+            <br> <a>2 Decimal Place: </a> {{100 | number:'3.2'}}
 
         </p>
     </div>
@@ -35,6 +49,15 @@
             {{"Actual Text: "+name}}
             <br> {{"Uppercase Text: "+(name | uppercase)}}
             <br> {{"Lowercase Text: "+(name | lowercase)}}
+        </p>
+    </div>
+
+
+    <div class="event">
+        <h3>Percentage Pipes</h3>
+
+        <p class="field">
+            <a>2 Place Formatting: </a> {{100 | percent:'3.2' }}
         </p>
     </div>
 </div>
